@@ -1,3 +1,32 @@
+## Ejercicio 1 ##
+
+``` 
+#include <stdio.h>
+
+int main() {
+    // Declaración e inicialización del arreglo
+    int Datos[10] = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
+    
+    printf("Elementos del arreglo y sus direcciones de memoria:\n");
+    printf("------------------------------------------------\n");
+    printf("| Valor | Indice | Direccion de memoria  |\n");
+    printf("------------------------------------------------\n");
+    
+    // Iterar a través del arreglo
+    for(int i = 0; i < 10; i++) {
+        // Imprimir el valor, índice y dirección de memoria de cada elemento
+        printf("| %5d | %6d | %p |\n", Datos[i], i, &Datos[i]);
+    }
+    
+    printf("------------------------------------------------\n");
+    
+    return 0;
+}
+```
+
+
+
+
 ## Preguntas de Control ##
 1. ¿Qué valor contiene el siguiente dato: `dato[5]`, si el arreglo se inicializa de la siguiente manera: `int datos[6] = {5, 82, 41};`?
 
@@ -34,3 +63,126 @@ __Se guardar de manera ordenada, uno despues del otro ocupando espacios de memor
 3. ¿Qué precauciones se deben tomar al usar punteros para recorrer arreglos?
 
 __Asegurarse de que un puntero apunte a un valor dentro del rango de un arreglo, tener cuidado con no excederse con el tamaño de un arreglo, cuidarse de usar punteros que no apuntes a ninguna direccion de memoria valida.__
+
+## Ejercicios Practicos ##
+### Ejercicio1 ###
+
+```
+#include <stdio.h>
+
+int main() {
+    
+    int numeros[10];
+    
+    // Rellenarlo con numeros consecutivos desde el 11 hasta el 20
+    for (int i = 0; i < 10; i++) {
+        numeros[i] = 11 + i;
+    }
+    
+    printf("Array en orden descendente:\n");
+    for (int i = 9; i >= 0; i--) {
+        printf("%d ", numeros[i]);
+    }
+    printf("\n");
+    
+    return 0;
+}
+```
+### Ejercicio2 ###
+
+```
+#include <stdio.h>
+
+int main() {
+    
+    int pares[5];
+    
+    // Rellenar el array con números pares del 2 al 10
+    for (int i = 0; i < 5; i++) {
+        pares[i] = 2 * (i + 1); // Genera 2, 4, 6, 8, 10
+    }
+    
+    // Imprimir los valores en orden ascendente
+    printf("Números pares :\n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", pares[i]);
+    }
+    printf("\n");
+    
+    return 0;
+}
+```
+
+### Ejercicio3 ###
+
+```
+#include <stdio.h>
+
+int main() {
+    int numeros[10];
+    int suma = 0;
+    int resta;
+    
+    printf("Introduce 10 números enteros:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Número %d: ", i + 1);
+        scanf("%d", &numeros[i]);
+    }
+    
+    // Calcular operaciones acumuladas
+    resta = numeros[0]; // Inicializamos con el primer valor
+    for (int i = 1; i < 10; i++) {
+        resta -= numeros[i];
+    }
+    
+    for (int i = 0; i < 10; i++) {
+        suma += numeros[i];
+        multiplicacion *= numeros[i];
+    }
+    
+    // Mostrar resultados
+    printf("\nResultados:\n");
+    printf("Suma total: %d\n", suma);
+    printf("Resta acumulada: %d\n", resta);
+    printf("Multiplicación acumulada: %lld\n", multiplicacion);
+    
+    return 0;
+}
+```
+### Ejercicio4 ###
+
+```
+#include <stdio.h>
+
+int main() {
+    int numeros[10];
+    int suma = 0;
+    int resta;
+    
+    // Leer 10 números desde teclado
+    printf("Introduce 10 números enteros:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Número %d: ", i + 1);
+        scanf("%d", &numeros[i]);
+    }
+    
+    // Calcular operaciones acumuladas
+    resta = numeros[0]; // Inicializamos con el primer valor
+    for (int i = 1; i < 10; i++) {
+        resta -= numeros[i];
+    }
+    
+    for (int i = 0; i < 10; i++) {
+        suma += numeros[i];
+        multiplicacion *= numeros[i];
+    }
+    
+    // Mostrar resultados
+    printf("\nResultados:\n");
+    printf("Suma total: %d\n", suma);
+    printf("Resta acumulada: %d\n", resta);
+    printf("Multiplicación acumulada: %lld\n", multiplicacion);
+    
+    return 0;
+}
+```
