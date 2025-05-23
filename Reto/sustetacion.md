@@ -1,6 +1,5 @@
 ## 1. **Explicación del análisis del problema**: ##
     
-    Describan, con sus propias palabras, cómo entendieron el problema, qué decisiones tomaron para resolverlo y por qué.
 El programa debe analizar archivos de texto (.txt), a traves de un menú que permita cargar el archivo, calcular las estadisticas correspondientes, reemplazar palabras, guardar resultados y calcular la frecuencia de vocales.
 
 Todo esto para entrarle al usuario el conteo de caracteres, palabras, espacios y lineas. Poder buscar una palabra en el texto y cambiarla por otra. Mostrar cuantas veces aparece cada vocal sin distinguir si es mayúscula o minúscula y al final, exportar todos estos datos y cambios de haber sido hechos a un nuevo archivo.
